@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './assets/scss/themes/app.light.red.scss'
+// import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+import './assets/plugins/flaticon/flaticon.css';
+import './assets/plugins/flaticon2/flaticon.css';
 
 ReactDOM.render(
   <React.StrictMode>
