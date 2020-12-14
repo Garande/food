@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import createSagaMiddleware from 'redux-saga';
-import {persistStore} from 'redux-persist'
+// import {persistStore} from 'redux-persist'
 import reducers from './reducers';
 import sagas from './sagas';
 
@@ -22,4 +22,4 @@ export function configureStore(initialState) {
     return store;
 }
 
-export const persistor = persistStore(configureStore());
+// export const persistor = persistStore(configureStore());
