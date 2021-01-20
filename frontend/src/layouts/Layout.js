@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Menu, Layout, Breadcrumb  } from 'antd';
+import { connect } from 'react-redux';
+import {fetchCategories, fetchFoods} from '../store/actions'
 
 const {Content, Header, Footer} = Layout;
 
@@ -9,6 +11,12 @@ class MainLayout extends Component {
         this.state = {
             today: new Date().getFullYear(),
         }
+    }
+
+
+    componentDidMount(){
+        this.props.fetchFoods();
+        this.props.fetchCategories()
     }
 
 
@@ -28,7 +36,7 @@ class MainLayout extends Component {
                         {this.props.children}
                     </div>
                 </Content>
-                {/* <Footer style={{ textAlign: 'center' }}>Foods ©{this.state.today} Created by Datamine IT</Footer> */}
+                <Footer style={{ textAlign: 'center' }}>Foods ©{this.state.today} Created by Datamine IT</Footer>
             </Layout>
             </div>
         )
@@ -36,4 +44,4 @@ class MainLayout extends Component {
 }
 
 
-export default MainLayout;
+export default connect(null, {fetchCategories, fetchFoods})(MainLayout);

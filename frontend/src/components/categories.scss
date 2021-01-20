@@ -1,0 +1,19 @@
+.categories-list {
+    margin: 0;
+
+    li {
+        &.active {
+            a {
+                background-color: ;
+            }
+        }
+
+        a {
+            position: relative;
+            display: block;
+            padding: 15px 20px;
+            transition: all 0.4s;
+            border-top: 1px solid;
+        }
+    }
+}
